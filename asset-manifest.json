@@ -1,16 +1,14 @@
 {
   "files": {
-    "main.css": "/09-todo-react-group-shiyeon/static/css/main.3c36158d.chunk.css",
-    "main.js": "/09-todo-react-group-shiyeon/static/js/main.e4eb8ed3.chunk.js",
-    "main.js.map": "/09-todo-react-group-shiyeon/static/js/main.e4eb8ed3.chunk.js.map",
-    "runtime~main.js": "/09-todo-react-group-shiyeon/static/js/runtime~main.e81e5ba5.js",
-    "runtime~main.js.map": "/09-todo-react-group-shiyeon/static/js/runtime~main.e81e5ba5.js.map",
-    "static/js/2.a71b1702.chunk.js": "/09-todo-react-group-shiyeon/static/js/2.a71b1702.chunk.js",
-    "static/js/2.a71b1702.chunk.js.map": "/09-todo-react-group-shiyeon/static/js/2.a71b1702.chunk.js.map",
+    "main.css": "/09-todo-react-group-shiyeon/static/css/main.073c9b0a.css",
+    "main.js": "/09-todo-react-group-shiyeon/static/js/main.19899899.js",
+    "static/media/logo.svg": "/09-todo-react-group-shiyeon/static/media/logo.cf1ad5ea55bdf7ea6e8c68b1ae6ee00b.svg",
     "index.html": "/09-todo-react-group-shiyeon/index.html",
-    "precache-manifest.4bab0817e3522b7d8e87db7238905753.js": "/09-todo-react-group-shiyeon/precache-manifest.4bab0817e3522b7d8e87db7238905753.js",
-    "service-worker.js": "/09-todo-react-group-shiyeon/service-worker.js",
-    "static/css/main.3c36158d.chunk.css.map": "/09-todo-react-group-shiyeon/static/css/main.3c36158d.chunk.css.map",
-    "static/media/logo.svg": "/09-todo-react-group-shiyeon/static/media/logo.0655df93.svg"
-  }
+    "main.073c9b0a.css.map": "/09-todo-react-group-shiyeon/static/css/main.073c9b0a.css.map",
+    "main.19899899.js.map": "/09-todo-react-group-shiyeon/static/js/main.19899899.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.19899899.js"
+  ]
 }

@@ -12,8 +12,10 @@ in a separate CSS file for each component.
 body {
   margin: 0;
   display:grid;
+  /*
   grid-template-columns: auto auto;
   grid-template-rows: 70px auto;
+  */
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
@@ -22,7 +24,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+*/

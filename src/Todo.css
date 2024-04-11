@@ -1,0 +1,47 @@
+.container{
+    grid-area: 2 / 1 / 3 / 3;
+    display:grid;
+    margin-top:15em;
+    justify-content: space-evenly;
+    position:relative;
+}
+.container .nc_todo{
+    grid-area: 2 / 1 / 3 / 2;
+    width:30vw;
+    height:40vh;
+    padding:2em;
+    border-style:solid;
+    border-width: 2px;
+    border-color:#000000;
+    border-radius:30px;
+    position:relative;
+    overflow-y:scroll;
+}
+
+.container .c_todo{
+    grid-area: 2 / 2 / 3 / 3;
+    background-color:#EAEAEA;
+    width:30vw;
+    height:40vh;
+    padding:2em;
+    border-radius:30px;
+    position:relative;
+    overflow-y:scroll;
+}
+
+.container .nc_todo .todo_list{
+    display:flex;
+    justify-content: space-between;
+    padding:0.5em;
+}
+.container .c_todo .todo_list{
+    display:flex;
+    justify-content: space-between;
+    padding:0.5em;
+}
+.container .nc_todo .todo_list .check{
+    margin-right: 1em;
+}
+.container .c_todo .todo_list .check{
+    margin-right: 1em;
+}

@@ -10,7 +10,6 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <h1>This is my Edit</h1>
         <h2>Notes</h2>
         <ul>
           <li>Use CTRL+C or CMD+C to stop your React server.</li>

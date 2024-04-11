@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/09-todo-react-group-shiyeon/static/css/main.073c9b0a.css",
-    "main.js": "/09-todo-react-group-shiyeon/static/js/main.19899899.js",
-    "static/media/logo.svg": "/09-todo-react-group-shiyeon/static/media/logo.cf1ad5ea55bdf7ea6e8c68b1ae6ee00b.svg",
+    "main.css": "/09-todo-react-group-shiyeon/static/css/main.094edaf4.css",
+    "main.js": "/09-todo-react-group-shiyeon/static/js/main.98b8ddee.js",
     "index.html": "/09-todo-react-group-shiyeon/index.html",
-    "main.073c9b0a.css.map": "/09-todo-react-group-shiyeon/static/css/main.073c9b0a.css.map",
-    "main.19899899.js.map": "/09-todo-react-group-shiyeon/static/js/main.19899899.js.map"
+    "main.094edaf4.css.map": "/09-todo-react-group-shiyeon/static/css/main.094edaf4.css.map",
+    "main.98b8ddee.js.map": "/09-todo-react-group-shiyeon/static/js/main.98b8ddee.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.19899899.js"
+    "static/css/main.094edaf4.css",
+    "static/js/main.98b8ddee.js"
   ]
 }

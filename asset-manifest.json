@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/09-todo-react-group-shiyeon/static/css/main.3c36158d.chunk.css",
+    "main.js": "/09-todo-react-group-shiyeon/static/js/main.ca160b21.chunk.js",
+    "main.js.map": "/09-todo-react-group-shiyeon/static/js/main.ca160b21.chunk.js.map",
+    "runtime~main.js": "/09-todo-react-group-shiyeon/static/js/runtime~main.e81e5ba5.js",
+    "runtime~main.js.map": "/09-todo-react-group-shiyeon/static/js/runtime~main.e81e5ba5.js.map",
+    "static/js/2.a71b1702.chunk.js": "/09-todo-react-group-shiyeon/static/js/2.a71b1702.chunk.js",
+    "static/js/2.a71b1702.chunk.js.map": "/09-todo-react-group-shiyeon/static/js/2.a71b1702.chunk.js.map",
+    "index.html": "/09-todo-react-group-shiyeon/index.html",
+    "precache-manifest.f12be384932019d71623696f520ea1e0.js": "/09-todo-react-group-shiyeon/precache-manifest.f12be384932019d71623696f520ea1e0.js",
+    "service-worker.js": "/09-todo-react-group-shiyeon/service-worker.js",
+    "static/css/main.3c36158d.chunk.css.map": "/09-todo-react-group-shiyeon/static/css/main.3c36158d.chunk.css.map",
+    "static/media/logo.svg": "/09-todo-react-group-shiyeon/static/media/logo.0655df93.svg"
+  }
+}

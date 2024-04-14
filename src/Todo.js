@@ -1,20 +1,39 @@
 import React from 'react';
 import './Todo.css';
-//import logo from './logo.svg';
-//import './App.css';
 
+//building individual todo item
 function Todo() {
-    
-    return (
-        <div class="container">
-            <p>Up Next</p>
-            <div class="nc_todo" id="nc_todo"></div>
+    //let id = props.id;
+    //let classes = props.className;
 
-            <p>Completed</p>
-            <div class="c_todo" id="c_todo">
+    return (
+        <div className = "todo_list">
+            <div className = "label_div">
+
+                <input 
+                    type = "checkbox"
+                    className = "check"
+                    //id= 
+                />
+
+                <label 
+                    //id = {e}
+                    //text = {e}
+                />
+
+                <button 
+                    type = "submit"
+                    className = "delete_btn"
+                    //id = {e}
+                >Delete</button>
+
             </div>
         </div>
+        
+
     );
   }
 
   export default Todo;
+
+  //export default Todo();

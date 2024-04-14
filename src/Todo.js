@@ -2,7 +2,7 @@ import React from 'react';
 import './Todo.css';
 
 //building individual todo item
-function Todo() {
+export default function Todo(e) {
     //let id = props.id;
     //let classes = props.className;
 
@@ -13,27 +13,23 @@ function Todo() {
                 <input 
                     type = "checkbox"
                     className = "check"
-                    //id= 
+                    id= {e.id}
                 />
 
                 <label 
-                    //id = {e}
-                    //text = {e}
+                    id = {e.id}
+                    text = {e.text}
                 />
 
                 <button 
                     type = "submit"
                     className = "delete_btn"
-                    //id = {e}
+                    id = {e.id}
                 >Delete</button>
 
             </div>
         </div>
         
-
     );
   }
 
-  export default Todo;
-
-  //export default Todo();

@@ -2,15 +2,21 @@
     display:flex;
     justify-content: space-between;
     padding:0.5em;
-}
+  }
 .todo_list{
     display:flex;
     justify-content: space-between;
     padding:0.5em;
-}
+  }
 .todo_list .check{
     margin-right: 1em;
-}
+  }
 .todo_list .check{
     margin-right: 1em;
-}
+  }
+.delete_btn{
+    margin-left:5em;
+    border-radius:30px;
+    background-color: #000000;
+    color:#ffffff;
+  }

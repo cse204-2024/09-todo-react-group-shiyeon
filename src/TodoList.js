@@ -36,7 +36,11 @@ function TodoList() {
         <div className="nc_todo" id="nc_todo">
                 {todos.map((todo) => {
                     return(
-                        <Todo key = {todo.id} id = {todo.id} text = {todo.text} completed = {todo.completed} />
+                        <Todo 
+                        key = {todo.id} 
+                        id = {todo.id} 
+                        text = {todo.text} 
+                        completed = {todo.completed} />
                     );        
             })}
         </div>

@@ -2,27 +2,29 @@ import React from 'react';
 import './Todo.css';
 
 //building individual todo item
-export default function Todo(key, id, text) {
+export default function Todo(e) {
+
+    console.log(e.id);
 
     return (
-        <div className = "todo_list" key = {key}>
+        <div className = "todo_list" key = {e.id}>
             <div className = "label_div">
 
                 <input 
                     type = "checkbox"
                     className = "check"
-                    id= {id}
+                    id= {e.id}
                 />
 
                 <label 
-                    id = {id}
-                    text = {text}
-                />
+                    id = {e.id}
+                    text = {e.text}
+                >{e.text}</label>
 
                 <button 
                     type = "submit"
                     className = "delete_btn"
-                    id = {id}
+                    id = {e.id}
                 >Delete</button>
 
             </div>

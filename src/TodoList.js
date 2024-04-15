@@ -17,7 +17,7 @@ function TodoList() {
               todos.sort(function (a, b){
                 return parseFloat(a.created_at) - parseFloat(b.created_at);
               });
-              //console.log(todos);
+                //console.log(todos);
               
             }else if(this.readyState == 4){
               console.log(this.responseText);
@@ -34,8 +34,10 @@ function TodoList() {
             
         <p>Up Next</p>
         <div className="nc_todo" id="nc_todo">
-            {todos.map((todo) => {
-                <Todo key = {todo.id} id = {todo.id} text = {todo.text} completed = {todo.completed} />
+                {todos.map((todo) => {
+                    return(
+                        <Todo key = {todo.id} id = {todo.id} text = {todo.text} completed = {todo.completed} />
+                    );        
             })}
         </div>
 

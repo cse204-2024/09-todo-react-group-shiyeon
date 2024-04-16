@@ -54,9 +54,10 @@ function TodoList() {
         <div className="c_todo" id="c_todo">
             {
                 com_todolist.map((todo)=>{
+                    console.log(todo);
                     return(
-                        <Todo key ={todo.id} id ={todo.id} text = {todo.text} completed = {todo.completed}/>
-                    )
+                        <Todo key ={todo.id} id ={todo.id} text = {todo.text} completed = {todo.completed} />
+                    );
                 })
             }
         </div>

@@ -1,6 +1,8 @@
 # Todo React App Instructions (Modern React / Hooks Based)
 
-Before submitting, replace the text in this README file with your name and a brief description of your work (just a sentence or two will do). You can always come back to these instructions by visiting [this link](https://github.com/cse204-2024/react-starter-code/blob/460dc656585c269f8facdd163023c95cd25470f1/README.md).
+Shiyeon Monk
+
+React translation of the assignment 08 - Todo app. all functions should work as expected. All list are reordered by their created date when user "complete" or "un-complete" a task or add a new task.
 
 ## Modern React Instructions
 You will find almost all current React documetation and recent tutorials are going to look like this style.

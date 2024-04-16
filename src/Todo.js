@@ -9,6 +9,11 @@ export default function Todo(todo) {
         todo.deleteTodo(e.target.id);
     }
 
+    function handleUpdate(e){
+        e.preventDefault();
+        todo.updateTodo(e.target);
+    }
+
     if(todo.completed){
         return(
             <div className = "todo_list" key = {todo.id}>
@@ -18,7 +23,7 @@ export default function Todo(todo) {
                         type = "checkbox"
                         className = "check"
                         id= {todo.id}
-                        //onChange = {UpdateTodo}
+                        onChange = {handleUpdate}
                         checked
                     />
     
@@ -46,7 +51,7 @@ export default function Todo(todo) {
                         type = "checkbox"
                         className = "check"
                         id= {todo.id}
-                        //onChange = {UpdateTodo}
+                        onChange = {handleUpdate}
                     />
     
                     <label 

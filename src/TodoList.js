@@ -11,6 +11,12 @@ function TodoList() {
     const non_todolist = todos.filter(todo =>
         todo.completed == false
     );
+    com_todolist.sort(function (a, b){
+        return parseFloat(a.created_at) - parseFloat(b.created_at);
+      });
+    non_todolist.sort(function (a, b){
+        return parseFloat(a.created_at) - parseFloat(b.created_at);
+      });
 
 
     useEffect(()=>{
@@ -50,10 +56,10 @@ function TodoList() {
         xhttp2.onreadystatechange = function(){
             if (this.readyState == 4 && this.status == 200){
                 let todo = JSON.parse(this.responseText);
-                let newTodos = [...todos, todo];
+                let newTodos = [todo,...todos];
                 setTodos(newTodos);
+                document.getElementById("add_todo").value = "";
 
-                console.log(newTodos);
             }else if(this.readyState == 4){
                 console.log(this.responseText);
             }
@@ -63,6 +69,7 @@ function TodoList() {
         xhttp2.setRequestHeader("Content-type", "application/json");
         xhttp2.setRequestHeader("x-api-key", "d4681d-747376-1752ce-4282a1-053f50");
         xhttp2.send(JSON.stringify(data));
+
       }
 
       function deleteTodo(todo){
@@ -102,18 +109,19 @@ function TodoList() {
             xhttp2.onreadystatechange = function(){
                 if (this.readyState == 4 && this.status == 200){
                     let todo = JSON.parse(this.responseText);
-                    console.log(todo);
+                    //console.log(todo);
 
                 }else if (this.readyState == 4){
                     console.log(this.responseText);
                 }
             };
+
             xhttp2.open("PUT", "https://cse204.work/todos/"+id, true);
 
             xhttp2.setRequestHeader("Content-type", "application/json");
             xhttp2.setRequestHeader("x-api-key", "d4681d-747376-1752ce-4282a1-053f50");
-            xhttp2.send(JSON.stringify(data));
-            
+            xhttp2.send(JSON.stringify(data));  
+
             if(checked){
                 //add todo to a completed todolist
                 let changestatus = todos.find((prev_todo) => id == prev_todo.id);
@@ -123,6 +131,7 @@ function TodoList() {
                 changestatus.completed = false;
             }
             setTodos(todos);
+
         }
 
        

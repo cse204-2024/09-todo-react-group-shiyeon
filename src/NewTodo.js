@@ -4,6 +4,7 @@ import './NewTodo.css';
 //import './App.css';
 
 function NewTodo() {
+    
     return (
         <div className="input" id="new_todo">
           <form>

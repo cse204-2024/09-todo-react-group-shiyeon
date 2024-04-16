@@ -1,5 +1,6 @@
 import React from 'react';
 import './Todo.css';
+import deleteTodo from './TodoList'
 
 //building individual todo item
 export default function Todo(e) {
@@ -13,6 +14,7 @@ export default function Todo(e) {
                         type = "checkbox"
                         className = "check"
                         id= {e.id}
+                        //onChange = {UpdateTodo}
                         checked
                     />
     
@@ -25,6 +27,7 @@ export default function Todo(e) {
                         type = "submit"
                         className = "delete_btn"
                         id = {e.id}
+                        onClick = {e.deleteTodo}
                     >Delete</button>
     
                 </div>
@@ -39,6 +42,7 @@ export default function Todo(e) {
                         type = "checkbox"
                         className = "check"
                         id= {e.id}
+                        //onChange = {UpdateTodo}
                     />
     
                     <label 
@@ -50,13 +54,14 @@ export default function Todo(e) {
                         type = "submit"
                         className = "delete_btn"
                         id = {e.id}
+                        onClick = {e.deleteTodo}
                     >Delete</button>
     
                 </div>
             </div> 
         );
     }
+}
 
-    
-  }
+
 

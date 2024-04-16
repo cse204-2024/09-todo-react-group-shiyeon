@@ -1,5 +1,4 @@
 .input{
-  grid-area: 2 / 1 / 3 / 3;
   display:flex;
   width:100%;
   height:auto;
@@ -51,14 +50,14 @@
 }
 
 .container{
-    grid-area: 2 / 1 / 3 / 3;
-    display:grid;
+    display:flex;
     margin-top:2em;
+    flex-direction: row;
     justify-content: space-evenly;
     position:relative;
   }
+
   .container .nc_todo{
-    grid-area: 2 / 1 / 3 / 2;
     width:30vw;
     height:40vh;
     padding:2em;
@@ -71,7 +70,6 @@
   }
   
   .container .c_todo{
-    grid-area: 2 / 2 / 3 / 3;
     background-color:#EAEAEA;
     width:30vw;
     height:40vh;
@@ -83,12 +81,21 @@
 
 
 @media (max-width:1000px){
+  .container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+  }
 
   .container .nc_todo{
     width:320px;
+  }
 
+  .container .c_todo_cont {
+    margin-top:3em;
   }
   .container .c_todo{
+    flex-direction:column;
     width:320px;
   }
 }

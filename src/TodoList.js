@@ -6,10 +6,10 @@ import {useState, useEffect} from "react";
 function TodoList() {
     const [todos, setTodos] = useState([]);
     const com_todolist = todos.filter(todo => 
-        todo.completed == true
+        todo.completed === true
     );
     const non_todolist = todos.filter(todo =>
-        todo.completed == false
+        todo.completed === false
     );
     com_todolist.sort(function (a, b){
         return parseFloat(a.created_at) - parseFloat(b.created_at);
@@ -23,11 +23,11 @@ function TodoList() {
         let xhttp2 = new XMLHttpRequest();
   
         xhttp2.onreadystatechange = function(){
-            if (this.readyState == 4 && this.status == 200){
+            if (this.readyState === 4 && this.status === 200){
                 let todo = JSON.parse(this.responseText);
                 setTodos(todo);
                 
-              }else if(this.readyState == 4){
+              }else if(this.readyState === 4){
                 console.log(this.responseText);
             }
         };
@@ -54,13 +54,13 @@ function TodoList() {
         let xhttp2 = new XMLHttpRequest();
 
         xhttp2.onreadystatechange = function(){
-            if (this.readyState == 4 && this.status == 200){
+            if (this.readyState === 4 && this.status === 200){
                 let todo = JSON.parse(this.responseText);
                 let newTodos = [todo,...todos];
                 setTodos(newTodos);
                 document.getElementById("add_todo").value = "";
 
-            }else if(this.readyState == 4){
+            }else if(this.readyState === 4){
                 console.log(this.responseText);
             }
         };
@@ -78,10 +78,10 @@ function TodoList() {
         let xhttp2 = new XMLHttpRequest();
 
         xhttp2.onreadystatechange = function(){
-            if(this.readyState == 4 && this.status == 200){
+            if(this.readyState === 4 && this.status === 200){
             //let todos = JSON.parse(this.responseText);
             //console.log(todos);
-            }else if (this.readyState == 4){
+            }else if (this.readyState === 4){
             console.log(this.responseText);
             }
         };
@@ -107,11 +107,11 @@ function TodoList() {
             let xhttp2 = new XMLHttpRequest();
 
             xhttp2.onreadystatechange = function(){
-                if (this.readyState == 4 && this.status == 200){
-                    let todo = JSON.parse(this.responseText);
+                if (this.readyState === 4 && this.status === 200){
+                    //let todo = JSON.parse(this.responseText);
                     //console.log(todo);
 
-                }else if (this.readyState == 4){
+                }else if (this.readyState === 4){
                     console.log(this.responseText);
                 }
             };
@@ -142,27 +142,33 @@ function TodoList() {
 
             <div className="container">
 
-            <p>Up Next</p>
-            <div className="nc_todo" id="nc_todo">
-                {
-                non_todolist.map((todo)=>{
-                    return(
-                        <Todo key ={todo.id} id ={todo.id} text = {todo.text} completed = {todo.completed} updateTodo={updateTodo} deleteTodo={deleteTodo} />
-                    );
-                })
-                }
+            <div className="nc_todo_cont">
+                <p>Up Next</p>
+                    <div className="nc_todo" id="nc_todo">
+                    {
+                    non_todolist.map((todo)=>{
+                        return(
+                            <Todo key ={todo.id} id ={todo.id} text = {todo.text} completed = {todo.completed} updateTodo={updateTodo} deleteTodo={deleteTodo} />
+                        );
+                    })
+                    }
+                </div>
             </div>
             
-            <p>Completed</p>
-            <div className="c_todo" id="c_todo">
-                {
-                com_todolist.map((todo)=>{
-                    return(
-                        <Todo key ={todo.id} id ={todo.id} text = {todo.text} completed = {todo.completed} updateTodo={updateTodo} deleteTodo={deleteTodo}/>
-                    );
-                })
-                }
+            
+            <div className="c_todo_cont">
+                <p>Completed</p>
+                <div className="c_todo" id="c_todo">
+                    {
+                    com_todolist.map((todo)=>{
+                        return(
+                            <Todo key ={todo.id} id ={todo.id} text = {todo.text} completed = {todo.completed} updateTodo={updateTodo} deleteTodo={deleteTodo}/>
+                        );
+                    })
+                    }
+                </div>
             </div>
+            
             </div>
         </div>
         

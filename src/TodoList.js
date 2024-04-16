@@ -156,7 +156,7 @@ function TodoList() {
                 })
                 }
             </div>
-
+            
             <p>Completed</p>
             <div className="c_todo" id="c_todo">
                 {

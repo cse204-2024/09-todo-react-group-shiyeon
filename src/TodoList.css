@@ -80,3 +80,16 @@
     position:relative;
     overflow-y:scroll;
   }
+
+
+@media (max-width:1000px){
+
+  .container .nc_todo{
+    width:320px;
+
+  }
+  .container .c_todo{
+    width:320px;
+  }
+}
+  

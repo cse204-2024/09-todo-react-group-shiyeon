@@ -4,8 +4,6 @@ import './Todo.css';
 //building individual todo item
 export default function Todo(e) {
 
-    console.log(e.id);
-
     return (
         <div className = "todo_list" key = {e.id}>
             <div className = "label_div">

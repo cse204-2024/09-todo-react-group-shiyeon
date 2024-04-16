@@ -17,7 +17,6 @@ function TodoList() {
               todos.sort(function (a, b){
                 return parseFloat(a.created_at) - parseFloat(b.created_at);
               });
-                //console.log(todos);
               
             }else if(this.readyState == 4){
               console.log(this.responseText);
@@ -29,24 +28,38 @@ function TodoList() {
   
     }, []);
 
+    const com_todolist = todos.filter(todo => 
+        todo.completed == true
+    );
+
+    const non_todolist = todos.filter(todo =>
+        todo.completed == false
+    );
+
     return (
         <div className="container">
-            
+
         <p>Up Next</p>
         <div className="nc_todo" id="nc_todo">
-                {todos.map((todo) => {
-                    return(
-                        <Todo 
-                        key = {todo.id} 
-                        id = {todo.id} 
-                        text = {todo.text} 
-                        completed = {todo.completed} />
-                    );        
-            })}
+                {
+                    non_todolist.map((todo)=>{
+                        return(
+                            <Todo key ={todo.id} id ={todo.id} text = {todo.text} completed = {todo.completed}/>
+                        );
+                    })
+                }
         </div>
 
         <p>Completed</p>
-        <div className="c_todo" id="c_todo"></div>
+        <div className="c_todo" id="c_todo">
+            {
+                com_todolist.map((todo)=>{
+                    return(
+                        <Todo key ={todo.id} id ={todo.id} text = {todo.text} completed = {todo.completed}/>
+                    )
+                })
+            }
+        </div>
         </div>
     );
   }

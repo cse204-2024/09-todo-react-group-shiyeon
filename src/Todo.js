@@ -1,33 +1,37 @@
 import React from 'react';
 import './Todo.css';
-import deleteTodo from './TodoList'
 
 //building individual todo item
-export default function Todo(e) {
+export default function Todo(todo) {
+    
+    function handleDelete(e){
+        e.preventDefault();
+        todo.deleteTodo(e.target.id);
+    }
 
-    if(e.completed){
+    if(todo.completed){
         return(
-            <div className = "todo_list" key = {e.id}>
+            <div className = "todo_list" key = {todo.id}>
                 <div className = "label_div">
     
                     <input 
                         type = "checkbox"
                         className = "check"
-                        id= {e.id}
+                        id= {todo.id}
                         //onChange = {UpdateTodo}
                         checked
                     />
     
                     <label 
-                        id = {e.id}
-                        text = {e.text}
-                    >{e.text}</label>
+                        id = {todo.id}
+                        text = {todo.text}
+                    >{todo.text}</label>
     
                     <button 
                         type = "submit"
                         className = "delete_btn"
-                        id = {e.id}
-                        onClick = {e.deleteTodo}
+                        id = {todo.id}
+                        onClick = {handleDelete}
                     >Delete</button>
     
                 </div>
@@ -35,26 +39,26 @@ export default function Todo(e) {
         );
     }else{
         return (
-            <div className = "todo_list" key = {e.id}>
+            <div className = "todo_list" key = {todo.id}>
                 <div className = "label_div">
     
                     <input 
                         type = "checkbox"
                         className = "check"
-                        id= {e.id}
+                        id= {todo.id}
                         //onChange = {UpdateTodo}
                     />
     
                     <label 
-                        id = {e.id}
-                        text = {e.text}
-                    >{e.text}</label>
+                        id = {todo.id}
+                        text = {todo.text}
+                    >{todo.text}</label>
     
                     <button 
                         type = "submit"
                         className = "delete_btn"
-                        id = {e.id}
-                        onClick = {e.deleteTodo}
+                        id = {todo.id}
+                        onClick = {handleDelete}
                     >Delete</button>
     
                 </div>

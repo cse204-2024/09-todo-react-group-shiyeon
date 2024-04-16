@@ -115,23 +115,19 @@ function TodoList() {
                     console.log(this.responseText);
                 }
             };
-
             xhttp2.open("PUT", "https://cse204.work/todos/"+id, true);
 
             xhttp2.setRequestHeader("Content-type", "application/json");
             xhttp2.setRequestHeader("x-api-key", "d4681d-747376-1752ce-4282a1-053f50");
             xhttp2.send(JSON.stringify(data));  
 
-            if(checked){
-                //add todo to a completed todolist
-                let changestatus = todos.find((prev_todo) => id == prev_todo.id);
-                changestatus.completed = true;
-            }else{
-                let changestatus = todos.find((prev_todo) => id == prev_todo.id);
-                changestatus.completed = false;
-            }
-            setTodos(todos);
-
+            const todoStatus = todos.map((todo) => {
+                if(id === todo.id){
+                    return {...todo, completed: !todo.completed};
+                }
+                return todo
+            });
+            setTodos(todoStatus);
         }
 
        
